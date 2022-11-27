@@ -1,0 +1,25 @@
+cabal-version:      2.4
+
+name:               Simplify
+version:            0.1.0.0
+
+synopsis:           Haskell Coursework 2
+
+library
+    exposed-modules:
+        Simplify
+        Expr
+        Poly
+    build-depends:    base >=4.11.0.0
+    default-language: Haskell2010
+
+test-suite Simplify-test
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    -- Directories containing source files.
+    hs-source-dirs:   test
+    main-is:          SimplifyTest.hs
+    build-depends:    base >=4.11.0.0,
+                      Simplify,
+                      tasty == 1.4.*,
+                      tasty-quickcheck == 0.10.*
